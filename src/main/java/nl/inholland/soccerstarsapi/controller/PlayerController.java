@@ -21,7 +21,7 @@ public class PlayerController {
 
     @RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity getAllPlayers(){
-        List<Player> players = playerService.getAllPlayers();
+        Iterable<Player> players = playerService.getAllPlayers();
         return ResponseEntity.status(200).body(players);
     }
 
